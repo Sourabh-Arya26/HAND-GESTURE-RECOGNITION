@@ -3,7 +3,8 @@ import mediapipe as mp
 
 # Initialize MediaPipe
 mp_hands = mp.solutions.hands
-hands = mp_hands.Hands()
+hands = mp_hands.Hands(static_image_mode=True,
+    max_num_hands=3)
 mp_draw = mp.solutions.drawing_utils
 
 # Start webcam
